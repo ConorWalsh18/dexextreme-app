@@ -7,19 +7,11 @@ function App({ Component, pageProps }: AppProps) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // This will run only on the client side
+    // This is needed to make NextJS work with DexExtreme
     setIsClient(true);
   }, []);
 
-  return (
-    <>
-      {/* <Head>
-        <title>Devextreme App</title>
-        <link rel="icon" href={`/favicon.ico`} />
-      </Head> */}
-      {isClient && <Component {...pageProps} />};
-    </>
-  );
+  return <>{isClient && <Component {...pageProps} />};</>;
 }
 
 export default App;
