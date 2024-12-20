@@ -1,5 +1,5 @@
+import CalendarComponent from '@/components/Calendar/Calendar';
 import DataGridComponent from '@/components/DataGrid/DataGrid';
-import { Calendar } from 'devextreme-react';
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
 
       <DataGridComponent />
 
-      <Calendar />
+      <CalendarComponent />
     </div>
   );
 }
