@@ -1,17 +1,17 @@
-import DataGridComponent from '@/components/DataGrid/DataGrid';
+import CalendarComponent from '@/components/Calendar/Calendar';
 import { Button } from 'devextreme-react';
 import Link from 'next/link';
 
-export default function Home() {
+export default function TestPage() {
   return (
     <div>
-      <h1>DevExtreme Next.js Demo</h1>
+      <h1>This is a test page</h1>
 
-      <DataGridComponent />
+      <CalendarComponent />
 
-      <Link href="/test-page" passHref>
+      <Link href="/" passHref>
         <Button
-          text="Go to Test Page"
+          text="Go to Home Page"
           type="default"
           stylingMode="contained"
           onClick={() => {}}

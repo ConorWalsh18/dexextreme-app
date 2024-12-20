@@ -11,7 +11,7 @@ function App({ Component, pageProps }: AppProps) {
     setIsClient(true);
   }, []);
 
-  return <>{isClient && <Component {...pageProps} />};</>;
+  return <>{isClient && <Component {...pageProps} />}</>;
 }
 
 export default App;
