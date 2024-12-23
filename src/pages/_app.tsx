@@ -1,3 +1,4 @@
+import { registerDevExtremeLicense } from '@/config/devextreme-license';
 import '@/styles/globals.css';
 import 'devextreme/dist/css/dx.light.css';
 import type { AppProps } from 'next/app';
@@ -7,6 +8,8 @@ function App({ Component, pageProps }: AppProps) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    registerDevExtremeLicense();
+
     // This is needed to make NextJS work with DexExtreme
     setIsClient(true);
   }, []);
