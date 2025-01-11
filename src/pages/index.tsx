@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div>
+    <div className="centered-container">
       <h1>DevExtreme Next.js Demo</h1>
 
       <DataGridComponent />

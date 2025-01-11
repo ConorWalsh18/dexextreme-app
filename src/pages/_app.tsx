@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar/Navbar';
 import { registerDevExtremeLicense } from '@/config/devextreme-license';
 import '@/styles/globals.css';
 import 'devextreme/dist/css/dx.light.css';
@@ -14,7 +15,19 @@ function App({ Component, pageProps }: AppProps) {
     setIsClient(true);
   }, []);
 
-  return <>{isClient && <Component {...pageProps} />}</>;
+  return (
+    <>
+      {isClient && (
+        <>
+          <div className="main-container">
+            <Navbar />
+
+            <Component {...pageProps} />
+          </div>
+        </>
+      )}
+    </>
+  );
 }
 
 export default App;
